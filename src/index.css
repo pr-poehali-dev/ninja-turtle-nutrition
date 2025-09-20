@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -96,6 +98,33 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-rubik;
+  }
+}
+
+@layer components {
+  .comic-border {
+    border: 3px solid #4a4a4a;
+    border-radius: 12px;
+    box-shadow: 4px 4px 0px #4a4a4a;
+  }
+
+  .comic-button {
+    @apply comic-border bg-turtle-green text-white font-bold py-3 px-6 transition-all duration-200;
+    transform: translateY(0px);
+  }
+
+  .comic-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 6px 6px 0px #4a4a4a;
+  }
+
+  .comic-button:active {
+    transform: translateY(2px);
+    box-shadow: 2px 2px 0px #4a4a4a;
+  }
+
+  .comic-text-shadow {
+    text-shadow: 2px 2px 0px #4a4a4a;
   }
 }
